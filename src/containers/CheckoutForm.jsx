@@ -1,6 +1,7 @@
 import {useState, useContext} from "react"
 import { CartContext } from "../components/CartContext.jsx"
 import { getFirestore, collection, addDoc } from "firebase/firestore"
+import "../styles/style.css";
 
 export const CheckoutForm = () => {
     const {cart, clearCart} = useContext(CartContext)
@@ -18,6 +19,17 @@ export const CheckoutForm = () => {
             alert("Por favor complete todos los campos")
             return
         }
+    
+    const order = {
+        buyer,
+        items: cart.map(item => ({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            quantity: item.quantity
+        })),
+        date: new Date().toISOString()
+    }   
 
     const db = getFirestore()
     const ordersCollection = collection(db, "orders")

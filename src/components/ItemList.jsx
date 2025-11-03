@@ -1,4 +1,5 @@
-import {Item} from './Item/Item.jsx'
+import {Item} from './Item.jsx'
+import "../styles/style.css";
 
 export const ItemList = ({products}) => {
     return (

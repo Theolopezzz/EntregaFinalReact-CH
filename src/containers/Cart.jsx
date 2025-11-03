@@ -4,7 +4,7 @@ import { CartItem } from "../components/CartItem";
 import { Link } from "react-router-dom";
 
 export const Cart = () => {
-    const { cart, clearCart, getTotalPrice } = useContext(CartContext);
+    const { cart, clearCart, removeFromCart, getTotalPrice } = useContext(CartContext);
     const total = cart.reduce((acc, item)=> acc + item.price * item.quantity, 0);
 
     if (cart.length === 0) {
