@@ -39,11 +39,16 @@ export const CheckoutForm = () => {
     }
 
     if(orderId){
-        return <h2>Gracias por su compra! Su ID de orden es: {orderId}</h2>
+        return (        
+        <div className="formulario">
+            <h2>Compra a nombre de {buyer.name}</h2>
+            <h3>Gracias por su compra! Su ID de orden es: {orderId}</h3>
+        </div>
+        )
     }
     return (
-        <div>
-            <h2>Formulario de Checkout</h2>
+        <div className="formulario">
+            <h2>Ingresa tus datos para confirmar la compra</h2>
             <input type="text" name="name" placeholder="Nombre" value={buyer.name} onChange={handleChange} />
             <input type="email" name="email" placeholder="Email" value={buyer.email} onChange={handleChange} />
             <input type="tel" name="phone" placeholder="Teléfono" value={buyer.phone} onChange={handleChange} />

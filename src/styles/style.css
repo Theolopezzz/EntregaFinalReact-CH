@@ -51,6 +51,7 @@ body div .card {
 body div .card img {
   width: 200px;
   border-radius: 10%;
+  margin: 10px 0;
 }
 body div .card button {
   margin: 10px 0;
@@ -87,4 +88,43 @@ body .item-detail .sumar-restar button {
   height: 50px;
   padding: 0;
   background-color: #181818;
+}
+body .cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 30px;
+}
+body .cart .cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(53, 53, 53);
+  box-shadow: #161616 0px 2px 3px 1px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: auto;
+}
+body .cart .cart-item button {
+  padding: 10px 20px;
+  background-color: #ff4c4c;
+}
+body .formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  gap: 50px;
+}
+body .formulario input {
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+body .formulario button {
+  width: 320px;
+  padding: 15px 20px;
+  background-color: #5c64ff;
 }/*# sourceMappingURL=style.css.map */

@@ -9,7 +9,7 @@ export const Cart = () => {
 
     if (cart.length === 0) {
         return (
-            <div>
+            <div className="cart">
                 <h2>Tu carrito está vacío</h2>
                 <Link to="/"><button>Volver al catálogo</button></Link>
             </div>
@@ -17,7 +17,7 @@ export const Cart = () => {
     }
 
     return (
-        <div>
+        <div className="cart">
             <h2>Carrito de Compras</h2>
             {cart.map(item => (
                 <CartItem key={item.id} item={item} removeFromCart={removeFromCart} />
