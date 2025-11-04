@@ -3,7 +3,7 @@ import "../styles/style.css";
 
 export const ItemList = ({products}) => {
     return (
-        <div className='product-grid'>
+        <div className='card-container'>
             {products.map(product => <Item key={product.id} product={product} />)}
         </div>
     )

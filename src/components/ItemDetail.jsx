@@ -13,7 +13,7 @@ export const ItemDetail = ({ product }) => {
         return <p>Cargando producto...</p>;
     }
     return (
-        <div>
+        <div className="item-detail">
             <h2>{product.name}</h2>
             <img src={`/imgs/${product.img}`} alt={product.name} />
             <p>Precio: ${product.price}</p>

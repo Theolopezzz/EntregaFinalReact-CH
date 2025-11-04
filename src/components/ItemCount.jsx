@@ -17,7 +17,7 @@ export const ItemCount = ({ stock, onAdd }) => {
 
     return (
         <div>
-            <div>
+            <div className="sumar-restar">
                 <button onClick={decrease}>-</button>
                 <span>{count}</span>
                 <button onClick={increase}>+</button>
